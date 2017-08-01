@@ -46,8 +46,8 @@ ext {
 
     libraryDescription = 'A pickerView on Android'
 
-    siteUrl = 'https://github.com/moonljt521/ljt.aopaspectj'
-    gitUrl = 'https://github.com/moonljt521/ljt.aopaspectj.git'
+    siteUrl = 'https://github.com/moonljt521/aopaspectj'
+    gitUrl = 'git@github.com:moonljt521/aopaspectj.git'
 
     libraryVersion = '1.0.0'
 
