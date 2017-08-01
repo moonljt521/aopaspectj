@@ -1,0 +1,63 @@
+apply plugin: 'com.android.library'
+//apply plugin: 'android-aspectjx'
+apply plugin: 'com.uphyca.android-aspectj'
+//apply plugin: 'com.novoda.bintray-release'//添加
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.0"
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 100
+        versionName "1.0.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    // aspectJ 依赖
+    compile 'org.aspectj:aspectjrt:1.8.9'
+
+}
+
+ext {
+    bintrayRepo = 'ljt'
+    bintrayName = 'aopaspectj'
+
+    publishedGroupId = 'com.moon.aopaspectj'
+    libraryName = 'aspectjlib'
+    artifact = 'aspectjlib'
+
+    libraryDescription = 'A pickerView on Android'
+
+    siteUrl = 'https://github.com/moonljt521/ljt.aopaspectj'
+    gitUrl = 'https://github.com/moonljt521/ljt.aopaspectj.git'
+
+    libraryVersion = '1.0.0'
+
+    developerId = 'moonljt521'
+    developerName = 'moonljt521'
+    developerEmail = '446741151@qq.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
