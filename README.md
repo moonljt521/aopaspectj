@@ -20,8 +20,11 @@
     还提供了
         
         @AopDebugLog    // 打印日志
+
         @CheckLoginTrace    // 检查登录状态 ，因为此方法与您的业务耦合，具体实现需要您自己来做，位置在 CheckLoginUtil.java 中
+
         @ExecuteDuringTimeTrace    // 打印某个方法的执行时间
+ 
         @PermissionTrace     // 检查权限
 
 
