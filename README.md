@@ -29,4 +29,26 @@
 
 
 # 引用方式，直接clone源码，或者采用直接依赖方式
-    compile 'com.moon.aopaspectj:aspectjlib:1.0.0'
+	
+	1 在你的项目根目录gradle文件里设置
+
+	buildscript 
+	{
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.3'
+        // 添加此行
+        classpath 'com.uphyca.gradle:gradle-android-aspectj-plugin:0.9.14'
+
+    }
+	}
+
+	2 在需要使用注解的module里（例如app）的build.gradle中设置
+
+	顶部添加 apply plugin: 'com.uphyca.android-aspectj'
+
+	dependencies 中添加
+		compile 'com.moon.aopaspectj:aspectjlib:1.0.1'
+
