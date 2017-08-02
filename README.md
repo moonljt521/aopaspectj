@@ -14,7 +14,7 @@
 
     }
     
-    可以防止此按钮被连点，影响你的业务逻辑错误
+    可以防止此按钮被连点，让你的业务逻辑因此产生错误
     
     除此之外
     还提供了
@@ -24,7 +24,7 @@
         @CheckLoginTrace    // 检查登录状态 ，因为此方法与您的业务耦合，具体实现需要您自己来做，位置在 CheckLoginUtil.java 中
 
         @ExecuteDuringTimeTrace    // 打印某个方法的执行时间
- 
+
         @PermissionTrace     // 检查权限
 
 
