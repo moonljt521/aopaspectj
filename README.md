@@ -1,10 +1,8 @@
-# moon
-一、这是一个基于aspectJ开源库的aop项目
+# 基于aspectJ 的AOP注解工具库
 
-二、引用方式，直接clone源码，或者 直接依赖
-    compile 'com.moon.aopaspectj:aspectjlib:1.0.0'
     
-三、使用
+# 使用
+
     可以在方法上直接用@注解方式使用
     
     例如
@@ -25,3 +23,7 @@
         @CheckLoginTrace    // 检查登录状态 ，因为此方法与您的业务耦合，具体实现需要您自己来做，位置在 CheckLoginUtil.java 中
         @ExecuteDuringTimeTrace    // 打印某个方法的执行时间
         @PermissionTrace     // 检查权限
+
+
+# 引用方式，直接clone源码，或者采用直接依赖方式
+    compile 'com.moon.aopaspectj:aspectjlib:1.0.0'
